@@ -23,7 +23,7 @@ void loop() {
 
 WIFI_CONNECTED(){
   String web_api = StringX::printf( WEATHER_API, LATITUDE, LONGITUDE);
-  WEATHER::GET(10000, web_api, [](String json){  // 
+  WEATHER::GET(10000, web_api, [](String json){
     Serial.println(json);
   });
 }
