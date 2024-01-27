@@ -19,6 +19,7 @@ void WEATHER::GET(uint32_t interval, String web_api, void (*fn)(String response)
       {
         HTTPClient https;
         https.begin(*client, _web_api);
+        Serial.println("--------------------------------------");
         Serial.print("[HTTPClient] GET : "); Serial.println(_web_api);
         int http_code = https.GET();
         // Serial.println(http_code);
